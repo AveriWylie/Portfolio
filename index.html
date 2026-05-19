@@ -72,10 +72,21 @@
     border-color: #7c5cbf44;
   }
 
+  .project.in-progress {
+    border-left-color: #4a2d6e;
+  }
+
+  .project.in-progress:hover {
+    border-color: #6b3fa044;
+  }
+
   .project-title {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .project-title a {
@@ -89,6 +100,22 @@
     color: #c4b5fd;
   }
 
+  .project.in-progress .project-title a {
+    color: #7c4dbb;
+  }
+
+  .project.in-progress .project-title a:hover {
+    color: #9b6dd6;
+  }
+
+  .in-progress-tag {
+    font-size: 10px;
+    color: #5c3490;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
   .project-desc {
     font-size: 13px;
     color: #cccccc;
@@ -100,6 +127,10 @@
     color: #7c5cbf;
     margin-top: 8px;
     font-style: italic;
+  }
+
+  .project.in-progress .project-abbr {
+    color: #4a2d6e;
   }
 
   .skills-list {
@@ -147,9 +178,21 @@
 <section>
   <h2>Projects</h2>
 
-  <div class="project">
+  <div class="project in-progress">
+    <div class="project-title">
+      <a href="https://github.com/shahyaranfaz/asdb" target="_blank">ASDB (Averi Shahyar DB) - In collaboration with Shahyar Anfaz</a>
+      <span class="in-progress-tag">in progress</span>
+    </div>
+    <p class="project-desc">
+      A database engine built from scratch in Rust with its own custom query language, not using SQL. Designed and implemented entirely from the ground up, covering storage, parsing, and query execution without relying on existing database libraries or SQL as a foundation.
+    </p>
+    <p class="project-abbr">ASDB — Averi Shahyar DB</p>
+  </div>
+
+  <div class="project in-progress">
     <div class="project-title">
       <a href="https://github.com/AveriWylie/AMP" target="_blank">AMP - In collaboration with Shahyar Anfaz</a>
+      <span class="in-progress-tag">in progress</span>
     </div>
     <p class="project-desc">
       Python-based Minecraft agent with guided and fully autonomous execution modes. Connects over raw TCP, decodes the binary protocol from scratch, parses live chunk data with a custom version-aware chunk parser, pathfinds with A*, and uses Claude as an AI planning layer to translate natural language into in-game actions. Includes mid-task prompt injection, enabling dynamic guidance of longer autonomous tasks that may span multiple subtasks within a single goal. The project is fully documented for an in-depth look at how the bot operates and what it produces.
@@ -188,7 +231,7 @@
 
 <section>
   <h2>Languages & Tools</h2>
-  <p class="skills-list">Python, C++, Java, C, C#, R, MATLAB, SQL, HTML</p>
+  <p class="skills-list">Python, C++, Java, C, C#, R, MATLAB, SQL, HTML, Rust</p>
   <br>
   <p class="skills-list">PyCharm, CLion, IntelliJ, VS Code, Eclipse, Git</p>
   <br>
