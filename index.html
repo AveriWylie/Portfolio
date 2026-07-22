@@ -62,22 +62,14 @@
   }
 
   .project {
-    margin-bottom: 32px;
-    padding-left: 16px;
-    border-left: 1px solid #1e1e1e;
-    transition: border-color 0.2s;
+  margin-bottom: 32px;
+  padding-left: 16px;
+  border-left: 1px solid #4a2d6e;
+  transition: border-color 0.2s;
   }
-
+  
   .project:hover {
-    border-color: #7c5cbf44;
-  }
-
-  .project.in-progress {
-    border-left-color: #4a2d6e;
-  }
-
-  .project.in-progress:hover {
-    border-color: #6b3fa044;
+  border-color: #6b3fa044;
   }
 
   .project-title {
@@ -96,21 +88,9 @@
     transition: color 0.2s;
   }
 
-  .project-title a:hover {
-    color: #c4b5fd;
-  }
-
-  .project.in-progress .project-title a {
-    color: #7c4dbb;
-  }
-
-  .project.in-progress .project-title a:hover {
-    color: #9b6dd6;
-  }
-
   .in-progress-tag {
     font-size: 10px;
-    color: #5c3490;
+    color: #7c4dbb;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -127,10 +107,6 @@
     color: #7c5cbf;
     margin-top: 8px;
     font-style: italic;
-  }
-
-  .project.in-progress .project-abbr {
-    color: #4a2d6e;
   }
 
   .skills-list {
@@ -200,6 +176,19 @@
     <p class="project-abbr">AMP — Agentic Minecraft Player</p>
   </div>
 
+ <div class="project in-progress">
+  <div class="project-title">
+    <a href="https://github.com/shahyaranfaz/SHAYVERI-CORE" target="_blank">SHAYVERI CORE</a>
+    <span class="in-progress-tag">in progress</span>
+  </div>
+  <p class="project-desc">
+    Spring Boot backend powering the SHAYVERI Roblox pipeline. SHAYVERI CORE (Compute Orchestration &amp; Rendering Engine) ingests live game telemetry, orchestrates optimization jobs across lab compute nodes, and manages versioned live-game configuration deployed through Roblox Open Cloud. Runs standalone using Docker with MongoDB and Redis.
+  </p>
+  <p class="project-abbr">
+    SHAYVERI CORE — Compute Orchestration &amp; Rendering Engine
+  </p>
+</div>
+
   <div class="project">
     <div class="project-title">
       <a href="https://github.com/shahyaranfaz/SHAYVERI" target="_blank">SHAYVERI - In collaboration with Shahyar Anfaz</a>
@@ -250,3 +239,4 @@
 
 </body>
 </html>
+
